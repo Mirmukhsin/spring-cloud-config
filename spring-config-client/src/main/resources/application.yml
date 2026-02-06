@@ -1,0 +1,20 @@
+#spring.application.name=spring-config-client
+
+spring:
+  application:
+    name: configClient
+
+  config:
+    import: optional:configserver:http://localhost:8888
+  profiles:
+    active: prod
+
+
+build:
+  id: ${ID}
+  version: ${VERSION}
+  name: ${NAME}
+  type: ${TYPE}
+
+server:
+  port: 9999
